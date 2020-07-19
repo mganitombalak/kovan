@@ -1,0 +1,17 @@
+Javascript Özellikleri
+
+
+Functional,
+Interpret
+Declarative,
+Dynamic Language   dildir.
+
+// Javascript Primitives
+
+boolean
+number
+string
+bigint
+null
+undefined
+symbol
