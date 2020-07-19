@@ -6,3 +6,5 @@ var myObject = {
         this.price=this.price * 1.15;
     }
 };
+
+//
