@@ -15,4 +15,15 @@ function printObject(object){
     });
 }
 
+function printFunction(object){
+    let entries = Object.entries(object);
+
+    entries.forEach(element => {
+        if(typeof(element[1]) == "function"){
+            console.log(element[0] + " " + element[1]);
+        }
+    });
+}
+
 printObject(myObject);
+printFunction(myObject);
