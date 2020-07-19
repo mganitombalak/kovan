@@ -1,0 +1,6 @@
+Javascript Özellikleri
+
+
+Functional,
+Interpret
+Declarative
