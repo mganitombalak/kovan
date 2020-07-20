@@ -7,9 +7,19 @@ var myObject = {
     }
 };
 
-labFunction();
-function labFunction() {
-    Object.keys(myObject).forEach(function (item) {
-        console.log("type: " + typeof item + ", value" + myObject[item]);
-    });
+// labFunction();
+// function labFunction() {
+//     Object.keys(myObject).forEach(function (item) {
+//         console.log("type: " + typeof item + ", value" + myObject[item]);
+//     });
+// }
+
+function* getObjectKeyValuePairs(obj){
+    for (let [key, value] of Object.entries(obj)) {
+        console.log(key, value);
+    }
 }
+
+var iterator = getObjectKeyValuePairs(myObject);
+console.log(iterator.next());
+console.log(iterator.next());
