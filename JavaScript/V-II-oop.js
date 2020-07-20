@@ -61,8 +61,6 @@
 // var p3 = new Pers("Huseyin Cihad", "Guler");
 // console.log(p3.getFullName());
 
-
-
 var mySecondObject = {
     name: "My Second Object",
     print: function () {
@@ -78,4 +76,7 @@ var mySecondObject = {
     }
 }
 
-mySecondObject.print();
+// mySecondObject.print();
+
+console.log(0.2 + 0.1);
+console.log(0.2 + 0.1 === 0.3);
