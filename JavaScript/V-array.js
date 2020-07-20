@@ -24,10 +24,31 @@ let p = value => console.log(value);
 //DECLARATIVE
 // numbers.forEach(item=>console.log(item));
 //numbers.unshift(0); 
-numbers.forEach(p);
+//numbers.forEach(p);
 // let sqrt = v => v * v;
 // numbers.map(sqrt).forEach(p);
 // numbers.forEach(p);
 var poppedOut = numbers.pop();
-console.log(`PoppedOut Value =>${poppedOut}`);
-numbers.forEach(p);
+//console.log(`PoppedOut Value =>${poppedOut}`);
+//numbers.forEach(p);
+
+var myObject = {
+    id:1,
+    type:0,
+    price:65.7,
+    name:"Somename",
+    profitFunc:function(){
+        this.price=this.price * 1.15;
+    },
+    sayHello:function(){}
+};
+
+Object.keys(myObject).forEach(prop=>
+    console.log(`${prop} => 
+    Value: ${myObject[prop]} 
+    Type: ${typeof myObject[prop]} `));
+
+Object.keys(myObject)
+.filter(prop=> typeof myObject[prop] === 'function')
+.forEach(f=>console.log(f));
+
