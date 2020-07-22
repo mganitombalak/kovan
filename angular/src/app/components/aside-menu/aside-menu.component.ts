@@ -7,12 +7,9 @@ import { IMenuItem } from 'src/app/core/models/IMenuItem';
   styleUrls: ['./aside-menu.component.css']
 })
 export class AsideMenuComponent implements OnInit {
-
   constructor(private menuService: MenuService) { }
-
+  model: Array<IMenuItem>;
   ngOnInit(): void {
-    let result = this.menuService.findAll();
-    console.log(result[0].title);
+    this.model =  this.menuService.findAll();
   }
-
 }

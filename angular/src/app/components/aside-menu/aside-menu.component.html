@@ -1,7 +1,8 @@
-<ul class="list-group">
-    <li appHover id="cat" class="list-group-item">Kategoriler</li>
-    <li appHover id="second" class="list-group-item">Dapibus ac facilisis in</li>
-    <li appHover class="list-group-item">Morbi leo risus</li>
-    <li appHover class="list-group-item">Porta ac consectetur ac</li>
-    <li appHover class="list-group-item">Vestibulum at eros</li>
-  </ul>
+<span *ngIf="!(model |arrayCheck)">Please check your internet connection</span>
+
+<ul *ngFor="let menuItem of model" class="list-group">
+  <li appHover class="list-group-item">{{menuItem.title}}</li>
+</ul>
+<!-- SHADOW | VIRTUAL DOM -->
+<!-- INCREMENTAL DOM -->
+
