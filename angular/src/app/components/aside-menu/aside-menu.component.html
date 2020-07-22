@@ -1,7 +1,7 @@
 <span *ngIf="!(model |arrayCheck)">Please check your internet connection</span>
 
 <ul *ngFor="let menuItem of model" class="list-group">
-  <li appHover class="list-group-item">{{menuItem.title}}</li>
+  <li appHover class="list-group-item"><a routerLink="{{menuItem.url}}">{{menuItem.title}}</a></li>
 </ul>
 <!-- SHADOW | VIRTUAL DOM -->
 <!-- INCREMENTAL DOM -->

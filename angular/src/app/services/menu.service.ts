@@ -7,6 +7,6 @@ export class MenuService {
     console.log(`Menu service has been called`);
     //MenuItem
     //[{title:'Kategori',url:'/category'},{title:'Birimler',url:'/units'}]
-    return [{ title: 'Kategori', url: '/category' }, { title: 'Birimler', url: '/units' },{ title: 'Urunler', url: '/products' }];
+    return [{ title: 'Kategori', url: '/category' }, { title: 'Birimler', url: '/unit' },{ title: 'Urunler', url: '/products' }];
   }
 }

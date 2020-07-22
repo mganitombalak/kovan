@@ -8,6 +8,7 @@ import { AsideMenuComponent } from './components/aside-menu/aside-menu.component
 import { HoverDirective } from './core/directives/hover.directive';
 import { DropHoverDirective } from './core/directives/drop-hover.directive';
 import { ArrayCheckPipe } from './core/pipes/array-check.pipe';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ArrayCheckPipe } from './core/pipes/array-check.pipe';
     AsideMenuComponent,
     HoverDirective,
     DropHoverDirective,
-    ArrayCheckPipe
+    ArrayCheckPipe,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
