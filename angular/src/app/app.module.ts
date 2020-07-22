@@ -9,6 +9,7 @@ import { HoverDirective } from './core/directives/hover.directive';
 import { DropHoverDirective } from './core/directives/drop-hover.directive';
 import { ArrayCheckPipe } from './core/pipes/array-check.pipe';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

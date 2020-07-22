@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CategoryService } from '../../services/category.service';
+import { ICategory } from 'src/app/core/models/ICategory';
+import {take} from 'rxjs/operators';
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -7,21 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(private categoryService: CategoryService) { }
 
   columnDefs = [
-    { headerName: 'Make', field: 'make', sortable: true },
-    { headerName: 'Model', field: 'model', sortable: true },
-    { headerName: 'Price', field: 'price', sortable: true }
+    { headerName: 'Name', field: 'name', sortable: true },
+    { headerName: 'Display Order', field: 'displayOrder', sortable: true },
+    { headerName: 'Active?', field: 'isActive', sortable: true }
   ];
 
-  rowData = [
-    { make: 'Toyota', model: 'Celica', price: 35000 },
-    { make: 'Ford', model: 'Mondeo', price: 32000 },
-    { make: 'Porsche', model: 'Boxter', price: 72000 }
-];
+  rowData: Array<ICategory>;
 
   ngOnInit(): void {
+    this.categoryService.find().pipe(take(1)).subscribe(result => this.rowData = result.data);
   }
 
 }
