@@ -6,13 +6,15 @@ import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AsideMenuComponent } from './components/aside-menu/aside-menu.component';
 import { HoverDirective } from './core/directives/hover.directive';
+import { DropHoverDirective } from './core/directives/drop-hover.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AsideMenuComponent,
-    HoverDirective
+    HoverDirective,
+    DropHoverDirective
   ],
   imports: [
     BrowserModule,
