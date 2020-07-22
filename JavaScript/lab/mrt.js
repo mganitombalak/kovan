@@ -6,9 +6,9 @@ var person = {
 
 
 function* keyvalpair(obj){
-    yield obj.name
-    yield obj.surname
-    yield obj.age
+    for (key of Object.keys(obj)){
+        yield {key:key, value:obj.key};
+    }  
 }
 
 var p = keyvalpair(person);
