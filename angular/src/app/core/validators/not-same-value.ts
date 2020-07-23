@@ -14,7 +14,7 @@ export function cannotHaveSameValue(): ValidatorFn {
                     .forEach(c2 => { if (c2.value === c.value && !controlList.includes(c.value)) { controlList.push(c.value); } });
                 }
             });
-            return (controlList.length > 0) ? { 'samevalue': { value: controlList.join(',') } } : null;
+            return (controlList.length > 0) ? { samevalue: { value: controlList.join(',') } } : null;
         }
     };
 }
