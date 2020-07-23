@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  // headerSearch: FormGroup;
+  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void {
+  // this.headerSearch = this.formBuilder.group([{
+
+  // }]);
+  }
 
 }

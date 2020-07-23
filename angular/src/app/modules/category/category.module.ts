@@ -5,14 +5,22 @@ import { CategoryRoutingModule } from './category-routing.module';
 import { IndexComponent } from './components/index/index.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { CategoryService } from './services/category.service';
-
+import { ApiConfig } from '../../core/injection-token/api-config';
+import { CommonComponentsModule } from '../shared/common-components/common-components.module';
+import { ActionGridCellComponent } from '../shared/common-components/action-grid-cell/action-grid-cell.component';
+import { UpsertComponent } from './components/upsert/upsert.component';
 @NgModule({
-  declarations: [IndexComponent],
+  declarations: [IndexComponent, UpsertComponent],
   imports: [
-    CommonModule,
     CategoryRoutingModule,
-    AgGridModule.withComponents([])
+    CommonComponentsModule,
+    AgGridModule.withComponents([ActionGridCellComponent])
   ],
-  providers:[CategoryService]
+  providers: [CategoryService,
+    {
+      provide: ApiConfig,
+      useValue: { endPoint: 'category' }
+    }
+  ]
 })
 export class CategoryModule { }

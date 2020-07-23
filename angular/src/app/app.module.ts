@@ -9,8 +9,10 @@ import { HoverDirective } from './core/directives/hover.directive';
 import { DropHoverDirective } from './core/directives/drop-hover.directive';
 import { ArrayCheckPipe } from './core/pipes/array-check.pipe';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './core/interceptor/token-interceptor';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ApiConfig } from './core/injection-token/api-config';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +26,16 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
