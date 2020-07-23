@@ -5,7 +5,7 @@ import { UpsertComponent } from './components/upsert/upsert.component';
 
 
 const routes: Routes = [
-  { path: '', component: UpsertComponent }
+  { path: '', component: IndexComponent }
 ];
 
 @NgModule({

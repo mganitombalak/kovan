@@ -9,7 +9,7 @@ export class TokenInterceptor implements HttpInterceptor {
         const newRequestObject = req.clone({
             headers: req.headers
                 .set('content-type', 'application/json')
-                .set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkNmNhY2IzLTMzNTQtNDUwMC04ODEyLWYwYjQ4NWY4YjRlNCIsImVtYWlsIjoibWdhbmkudG9tYmFsYWtAeWFob28uY29tIiwicm9sZSI6Im51bGwiLCJuYmYiOjE1OTU1MDI1MTcsImV4cCI6MTU5NTUwMzQxNywiaWF0IjoxNTk1NTAyNTE3fQ.5VtOW2JaTW_5eR51-h_9UUgdEuypMvGYi__wOll7Df8')
+                .set('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkNmNhY2IzLTMzNTQtNDUwMC04ODEyLWYwYjQ4NWY4YjRlNCIsImVtYWlsIjoibWdhbmkudG9tYmFsYWtAeWFob28uY29tIiwicm9sZSI6Im51bGwiLCJuYmYiOjE1OTU1MDY4MjAsImV4cCI6MTU5NTUwNzcyMCwiaWF0IjoxNTk1NTA2ODIwfQ.RgR331kEREMJsz4OEcvoGhPGpJYKtl3C9WmKcp5HPb0')
         });
         return next.handle(newRequestObject).pipe(
             catchError(err => {

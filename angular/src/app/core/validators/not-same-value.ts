@@ -2,7 +2,7 @@ import { AbstractControl, ValidatorFn, FormArray } from '@angular/forms';
 export function cannotHaveSameValue(): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {
         if (control instanceof FormArray) {
-            const controlList = [];
+            const controlList = []; // dymanic programming
             const controls = (control as FormArray).controls;
             controls.forEach(c => {
                 if (c.value !== '') {

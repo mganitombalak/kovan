@@ -1,13 +1,16 @@
 <form [formGroup]="upsertForm" (ngSubmit)="onSubmit()">
-<label>Name
+  <label>Name
     <input type="text" formControlName="name">
-</label>
-<label>Short Form
+  </label>
+  <label>Short Form
     <input type="text" formControlName="shortForm">
-</label>
-<div formArrayName="dynamic">
+  </label>
+  <div formArrayName="dynamic">
     <div *ngFor="let alias of getDynamicControls().controls; let i=index">
-      <!-- The repeated alias template -->
+      <!-- <div [ngSwitch]="alias.type">
+        <a [ngSwitchCase]="fdlkgjdfg">OK</a>
+        <a [ngSwitchCase]="asdasdf">OK</a>
+      </div> -->
       <label>
         Field:
         <input type="text" [formControlName]="i">

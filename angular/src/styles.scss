@@ -6,3 +6,17 @@
 .ag-theme-alpine {
     @include ag-theme-alpine();
 }
+
+input.ng-touched.ng-pristine,
+select.ng-touched.ng-pristine {
+  border-color: inherit;
+}
+
+input.ng-touched.ng-invalid,
+select.ng-touched.ng-invalid {
+  border-color: #f4516c;
+}
+input.ng-touched.ng-valid,
+select.ng-touched.ng-valid {
+  border-color: #34bfa3;
+}
